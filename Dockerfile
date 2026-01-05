@@ -1,0 +1,7 @@
+FROM n8nio/n8n:latest
+
+ENV N8N_PORT=5678
+ENV GENERIC_TIMEZONE=Asia/Dhaka
+
+# Install curl (optional)
+RUN apk add --no-cache curl
