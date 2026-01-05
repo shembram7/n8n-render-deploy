@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: n8n-app
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        fromEnv: N8N_BASIC_AUTH_ACTIVE
+      - key: N8N_BASIC_AUTH_USER
+        fromEnv: N8N_BASIC_AUTH_USER
+      - key: N8N_BASIC_AUTH_PASSWORD
+        fromEnv: N8N_BASIC_AUTH_PASSWORD
+      - key: N8N_HOST
+        fromEnv: N8N_HOST
+      - key: WEBHOOK_URL
+        fromEnv: WEBHOOK_URL
+      - key: N8N_PROTOCOL
+        fromEnv: N8N_PROTOCOL
+    autoDeploy: true
